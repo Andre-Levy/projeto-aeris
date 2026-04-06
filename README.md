@@ -1,6 +1,6 @@
-# ☁️ Projeto Ares
+# ☁️ Projeto Aeris
 
-O **Projeto Ares** é uma aplicação web de previsão do tempo que permite consultar informações climáticas de qualquer cidade de forma rápida e intuitiva.
+O **Projeto Aeris** é uma aplicação web de previsão do tempo que permite consultar informações climáticas de qualquer cidade de forma rápida e intuitiva.
 
 Além de exibir dados como temperatura e umidade, o projeto conta com uma funcionalidade inteligente de sugestão de roupas com base nas condições climáticas. 👕
 
