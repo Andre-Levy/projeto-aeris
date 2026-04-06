@@ -1,114 +1,145 @@
-@charset "UTF-8";
+:root {
+  --bg: #0f172a;
+  --card: rgba(255,255,255,0.05);
+  --primary: #38bdf8;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --glass: rgba(255,255,255,0.08);
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
-    background-color: rgb(37, 35, 35);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 100vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+/* CARD */
 .caixa-maior {
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 450px;
-    padding: 20px;
-    border-radius: 10px;
+  background: var(--card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass);
+  width: 420px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  animation: fadeIn 0.8s ease;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* TOPO */
+.topo {
+  display: flex;
+  gap: 10px;
 }
 
 .input-cidade {
-    border: none;
-    outline: none;
-    border-radius: 10px;
-    padding: 10px;
-    background-color: #7c7c7c2b;
-    color: #ffffff;
-    font-size: 20px;
-    width: calc(100% - 100px);
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 15px;
+  border-radius: 12px;
+  background: var(--glass);
+  color: var(--text);
+  font-size: 16px;
 }
 
+.input-cidade:focus {
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+/* BOTÕES */
 .botao {
-    padding: 12px;
-    border: none;
-    background-color: #7c7c7c2b;
-    border-radius: 50%;
-    margin-left: 8px;
-    float: right;
-    color: white;  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: 0.4s;
+  border: none;
+  background: var(--glass);
+  color: var(--text);
+  width: 45px;
+  height: 45px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .botao:hover {
-    background-color: #7c7c7c;
-    transform: scale(1.2);
+  background: var(--primary);
+  transform: scale(1.1);
 }
 
+/* RESULTADO */
 .caixa-media {
-    margin-top: 30px;
+  margin-top: 30px;
+  animation: fadeIn 1s ease;
 }
 
 .cidade {
-    font-size: 28px;
-    color: #ffffff;
+  font-size: 26px;
+  color: var(--text);
+  font-weight: 500;
 }
 
 .temp {
-    font-size: 30px;
-    color: #ffffff;
-    margin-top: 10px;
-    font-weight: bold;
-
+  font-size: 42px;
+  font-weight: bold;
+  color: var(--primary);
+  margin: 10px 0;
 }
 
+/* ÍCONE */
+.icone {
+  width: 80px;
+  margin: 10px 0;
+  animation: float 3s ease-in-out infinite;
+}
 
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
 
 .umidade {
-    color: #ffffff;
+  color: var(--muted);
+  margin-bottom: 15px;
 }
 
+/* BOTÃO IA */
 .botao-ia {
-    border-radius: 10px;
-    width: 100%;
-    margin-top: 20px;
-    padding: 12px 20px;
-    font-size: 16px;
-    color: #ffffff;
-    background-color: #7c7c7c;
-    border: none;
-    transition: 0.4S;
-
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.botao-ia:hover{
-    background-color: #7c7c7c;
-    transform: scale(1.04);
-    cursor: pointer;
+.botao-ia:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(56,189,248,0.4);
 }
 
-.botao-ia:active{
-    transform: scale(0.98);
-    opacity: 0.8;
-}
-
+/* TEXTO IA */
 .resposta-ia {
-    color: #ffffff;
-    margin-top: 15px;
-    font-size: 14px;
-    line-height: 1.5;
-
+  margin-top: 15px;
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.5;
+  animation: fadeIn 1s ease;
 }
