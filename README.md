@@ -17,7 +17,7 @@ Além de exibir dados como temperatura e umidade, o projeto conta com uma funcio
 ---
 
 🔗 **Link do site:**  
-*(https://andre-levy.github.io/projeto-portifolio/)*
+*(https://andre-levy.github.io/projeto-aeris/)*
 
 ## 🛠️ Tecnologias utilizadas
 
